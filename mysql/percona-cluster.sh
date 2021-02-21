@@ -14,9 +14,9 @@ sudo apt-get update
 
 echo "NOTE: Remember to remove apparmor or related package..."
 echo "Install XDB server..."
-echo "percona-server-server-5.6 percona-server-server/root_password password root" | sudo debconf-set-selections
-echo "percona-server-server-5.6 percona-server-server/root_password_again password root" | sudo debconf-set-selections
-sudo apt-get install -qq -y percona-xtradb-cluster-full-57
+#echo "percona-xtradb-cluster-server-5.7 percona-xtradb-cluster-server-5.7/root_password password root" | sudo debconf-set-selections
+#echo "percona-xtradb-cluster-server-5.7 percona-xtradb-cluster-server-5.7/root_password_again password root" | sudo debconf-set-selections
+sudo apt-get install -qq -y percona-xtradb-cluster-server-5.7
 
 echo "Stop server and wait for join..."
 sudo service mysql stop
