@@ -1,7 +1,8 @@
 #!/bin/bash
-sudo apt-get install gnupg2 wget -y
-wget https://repo.percona.com/apt/percona-release_latest.$(lsb_release -sc)_all.deb
-sudo dpkg -i percona-release_latest.$(lsb_release -sc)_all.deb
+# ref: https://www.percona.com/doc/percona-repo-config/percona-release.html#debian-and-ubuntu
+sudo apt-get install -y wget gnupg2 lsb-release curl
+wget https://repo.percona.com/apt/percona-release_latest.generic_all.deb
+sudo dpkg -i percona-release_latest.generic_all.deb
 sudo apt-get update
 sudo rm percona-release_latest.$(lsb_release -sc)_all.deb
 
