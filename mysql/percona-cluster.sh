@@ -4,9 +4,6 @@
 # https://www.databasesandlife.com/how-to-install-percona-mysql-5-6-on-ubuntu-14-04-lts-from-a-script-i-e-without-an-interactive-prompt-for-the-mysql-root-password/
 
 echo "Start install percona-xtradb-cluster-full-57..."
-#sudo apt-key adv --keyserver keys.gnupg.net --recv-keys 1C4CBDCDCD2EFD2A
-#sudo bash -c 'echo deb http://repo.percona.com/apt trusty main >> /etc/apt/sources.list'
-#sudo bash -c 'echo deb-src http://repo.percona.com/apt trusty main >> /etc/apt/sources.list'
 apt-get update
 apt-get install -y wget vim gnupg2 lsb-release curl
 wget https://repo.percona.com/apt/percona-release_latest.generic_all.deb
@@ -22,6 +19,6 @@ echo "percona-xtradb-cluster-server-5.7 percona-xtradb-cluster-server-5.7/re-roo
 apt-get install -qq -y percona-xtradb-cluster-server-5.7
 
 echo "Stop server and wait for join..."
-sudo service mysql stop
+service mysql stop
 
 echo "End of installation..."
