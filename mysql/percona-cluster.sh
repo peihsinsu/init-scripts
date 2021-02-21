@@ -7,8 +7,9 @@ echo "Start install percina cluster..."
 #sudo apt-key adv --keyserver keys.gnupg.net --recv-keys 1C4CBDCDCD2EFD2A
 #sudo bash -c 'echo deb http://repo.percona.com/apt trusty main >> /etc/apt/sources.list'
 #sudo bash -c 'echo deb-src http://repo.percona.com/apt trusty main >> /etc/apt/sources.list'
-wget https://repo.percona.com/apt/percona-release_latest.$(lsb_release -sc)_all.deb
-sudo dpkg -i percona-release_latest.$(lsb_release -sc)_all.deb
+sudo apt-get install -y wget vim gnupg2 lsb-release curl
+wget wget https://repo.percona.com/apt/percona-release_latest.generic_all.deb
+sudo dpkg -i percona-release_latest.generic_all.deb
 sudo apt-get update
 
 echo "NOTE: Remember to remove apparmor or related package..."
