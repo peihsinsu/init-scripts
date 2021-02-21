@@ -4,9 +4,11 @@
 # https://www.databasesandlife.com/how-to-install-percona-mysql-5-6-on-ubuntu-14-04-lts-from-a-script-i-e-without-an-interactive-prompt-for-the-mysql-root-password/
 
 echo "Start install percina cluster..."
-sudo apt-key adv --keyserver keys.gnupg.net --recv-keys 1C4CBDCDCD2EFD2A
-sudo bash -c 'echo deb http://repo.percona.com/apt trusty main >> /etc/apt/sources.list'
-sudo bash -c 'echo deb-src http://repo.percona.com/apt trusty main >> /etc/apt/sources.list'
+#sudo apt-key adv --keyserver keys.gnupg.net --recv-keys 1C4CBDCDCD2EFD2A
+#sudo bash -c 'echo deb http://repo.percona.com/apt trusty main >> /etc/apt/sources.list'
+#sudo bash -c 'echo deb-src http://repo.percona.com/apt trusty main >> /etc/apt/sources.list'
+wget https://repo.percona.com/apt/percona-release_latest.$(lsb_release -sc)_all.deb
+sudo dpkg -i percona-release_latest.$(lsb_release -sc)_all.deb
 sudo apt-get update
 
 echo "NOTE: Remember to remove apparmor or related package..."
