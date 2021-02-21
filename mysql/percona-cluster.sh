@@ -2,6 +2,7 @@
 # ref: 
 # https://www.percona.com/doc/percona-repo-config/percona-release.html#debian-and-ubuntu
 # https://www.databasesandlife.com/how-to-install-percona-mysql-5-6-on-ubuntu-14-04-lts-from-a-script-i-e-without-an-interactive-prompt-for-the-mysql-root-password/
+# https://github.com/docker-library/percona/blob/master/5.7/Dockerfile
 
 echo "Start install percona-xtradb-cluster-full-57..."
 apt-get update
